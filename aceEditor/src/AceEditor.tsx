@@ -9,13 +9,15 @@ class AceEditor extends Component<AceEditorContainerProps> {
 
     render(): ReactNode {
         const value = this.props.code.value || "";
-        return <Editor
-            value={value}
-            style={this.props.style}
-            className={this.props.class}
-            tabIndex={this.props.tabIndex}
-            onUpdate={this.onUpdateHandle}
-        />;
+        return (
+            <Editor
+                value={value}
+                style={this.props.style}
+                className={this.props.class}
+                tabIndex={this.props.tabIndex}
+                onUpdate={this.onUpdateHandle}
+            />
+        );
     }
 
     private onUpdate(value: string): void {

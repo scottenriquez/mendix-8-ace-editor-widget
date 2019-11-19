@@ -15,20 +15,22 @@ export interface InputProps {
 
 export class Editor extends Component<InputProps> {
     private readonly handleChange = this.onChange.bind(this);
-    
+
     render(): ReactNode {
         const className = classNames("form-control", this.props.className);
-        return (<div className={className} style={this.props.style} tabIndex={this.props.tabIndex}>
-            <AceEditor
-                mode="csharp"
-                theme="solarized_dark"
-                name="editor"
-                value={this.props.value}
-                editorProps={{ $blockScrolling: true }}
-                width="100%"
-                onChange={this.handleChange}
-            />
-        </div>);
+        return (
+            <div className={className} style={this.props.style} tabIndex={this.props.tabIndex}>
+                <AceEditor
+                    mode="csharp"
+                    theme="solarized_dark"
+                    name="editor"
+                    value={this.props.value}
+                    editorProps={{ $blockScrolling: true }}
+                    width="100%"
+                    onChange={this.handleChange}
+                />
+            </div>
+        );
     }
 
     private onChange(newValue: string): void {
