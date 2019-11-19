@@ -1,0 +1,13 @@
+{
+  "@mendix/generator-widget": {
+    "promptValues": {
+      "organization": "Scottie XXX",
+      "copyright": "Scottie Enriquez 2019",
+      "license": "MIT",
+      "author": "Scottie Enriquez",
+      "programmingLanguage": "typescript",
+      "platform": "web",
+      "boilerplate": "empty"
+    }
+  }
+}
