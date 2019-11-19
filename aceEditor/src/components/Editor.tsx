@@ -10,9 +10,12 @@ export interface InputProps {
     index?: number;
     style?: CSSProperties;
     tabIndex?: number;
+    onUpdate?: (value: string) => void;
 }
 
-export class Editor extends Component<InputProps> {    
+export class Editor extends Component<InputProps> {
+    private readonly handleChange = this.onChange.bind(this);
+    
     render(): ReactNode {
         const className = classNames("form-control", this.props.className);
         return (<div className={className} style={this.props.style} tabIndex={this.props.tabIndex}>
@@ -22,7 +25,15 @@ export class Editor extends Component<InputProps> {
                 name="editor"
                 value={this.props.value}
                 editorProps={{ $blockScrolling: true }}
+                width="100%"
+                onChange={this.handleChange}
             />
         </div>);
+    }
+
+    private onChange(newValue: string): void {
+        if (this.props.onUpdate) {
+            this.props.onUpdate(newValue);
+        }
     }
 }
