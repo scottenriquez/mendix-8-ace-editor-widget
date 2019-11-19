@@ -5,11 +5,11 @@ import { Editor } from "./components/Editor";
 declare function require(name: string): string;
 
 export class preview extends Component<AceEditorPreviewProps> {
-    render(): ReactNode {
+    render = (): ReactNode => {
         return <Editor value={this.props.code} />;
-    }
+    };
 }
 
-export function getPreviewCss(): string {
+export const getPreviewCss = (): string => {
     return require("./ui/AceEditor.css");
-}
+};

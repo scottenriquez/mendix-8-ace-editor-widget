@@ -5,7 +5,7 @@
             <widgetFile path="AceEditor.xml"/>
         </widgetFiles>
         <files>
-            <file path="scottiexxx/aceeditor"/>
+            <file path="scottiexxx/aceeditor/"/>
         </files>
     </clientModule>
 </package>

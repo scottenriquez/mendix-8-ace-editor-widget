@@ -5,9 +5,7 @@ import { Editor } from "./components/Editor";
 import "./ui/AceEditor.css";
 
 class AceEditor extends Component<AceEditorContainerProps> {
-    private readonly onUpdateHandle = this.onUpdate.bind(this);
-
-    render(): ReactNode {
+    render = (): ReactNode => {
         const value = this.props.code.value || "";
         return (
             <Editor
@@ -18,11 +16,13 @@ class AceEditor extends Component<AceEditorContainerProps> {
                 onUpdate={this.onUpdateHandle}
             />
         );
-    }
+    };
 
-    private onUpdate(value: string): void {
+    onUpdate = (value: string): void => {
         this.props.code.setValue(value);
-    }
+    };
+
+    private readonly onUpdateHandle = this.onUpdate.bind(this);
 }
 
 export default hot(AceEditor);

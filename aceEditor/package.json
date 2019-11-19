@@ -1,7 +1,7 @@
 {
   "name": "aceeditor",
   "widgetName": "AceEditor",
-  "version": "0.2.0",
+  "version": "1.0.2",
   "description": "Code editor widget for Mendix",
   "copyright": "Scottie Enriquez 2019",
   "author": "Scottie Enriquez",
