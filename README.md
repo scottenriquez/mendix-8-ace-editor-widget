@@ -16,7 +16,6 @@ If you'd like to test with a sample widget first, you can generate the skeleton 
 - TypeScript or JavaScript
 - Web and hybrid or native phone
 - Unit tests, end-to-end tests, or none
-- To build your widget, simply use the command npm run dev or npm run build. Note that you have to sync the local project directory manually by pressing F4 as well.
 
 ## Installation
 Simply run <code>git clone</code> for this repository in <code>/widgets/CustomWidgets</code>.
